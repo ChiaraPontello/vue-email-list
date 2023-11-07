@@ -9,7 +9,13 @@
     <title>Vue Email List</title>
 </head>
 <body>
-    
+    <div id="app" class="text-center">
+        <h1>Lista email</h1>
+        <ul v-if="emails.length === max">
+          <li v-for="email in emails">{{email}}</li>
+        </ul>
+        <span v-else>Caricamento E-mail in corso...</span>
+      </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/script.js"></script>
